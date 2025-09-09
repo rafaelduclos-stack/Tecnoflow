@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-image: url(novo.jpg);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #1e293b;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 35px #3b82f6;
+  width: 95%;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #60a5fa;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #334155;
+  color: white;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #2563eb;
+}
+
+.social-login {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.social-login button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Google */
+.google-btn {
+  background-color: white;
+  color: #444;
+}
+
+.google-btn:hover {
+  background-color: #eee;
+}
+
+/* Facebook */
+.facebook-btn {
+  background-color: #1877f2;
+  color: white;
+}
+
+.facebook-btn:hover {
+  background-color: #145dbf;
+}
+
+.social-login svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.toggle-form {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.toggle-form a {
+  color: #60a5fa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-link {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #3b82f6aa;
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login-link:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.go-home {
+  text-align: center;
+  margin-top: 2rem;
+}
