@@ -218,3 +218,45 @@ text-align: center;
 max-width: 90%; /* deixa o texto mais estreito para ficar visual melhor */
 
 }
+
+/* Rodapé */
+footer {
+  background-color: #122a57;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: center;
+  margin-top: 40px; /* só pra dar espaço antes do rodapé */
+}
+
+.footer-content {
+  color: #fff;
+}
+
+.footer-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #66aaff;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+footer a {
+  color: #66aaff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 15px;
+}
