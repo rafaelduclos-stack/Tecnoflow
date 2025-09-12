@@ -216,4 +216,44 @@ line-height: 1.6;
 color: #dde6ff;
 text-align: center;
 max-width: 90%; /* deixa o texto mais estreito para ficar visual melhor */
+
 }
+
+/* Rodapé */
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  background-color: #122a57;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  color: #fff;
+}
+
+.footer-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #66aaff;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+footer a {
+  color: #66aaff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
