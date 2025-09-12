@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(135deg, #0b1524 0%, #1b2a50 100%);
   color: #fff;
@@ -123,10 +124,12 @@ h1 {
 
 /* Rodapé */
 footer {
-  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
   background-color: #122a57;
   width: 100%;
-  padding: 40px 20px;
+  padding: 15px 20px;
   text-align: center;
 }
 
@@ -156,5 +159,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
 
