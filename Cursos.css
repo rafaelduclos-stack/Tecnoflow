@@ -123,7 +123,7 @@ h1 {
 
 /* Rodapé */
 footer {
-  margin-bottom: 0;
+  margin-bottom: 0px;
   background-color: #122a57;
   width: 100%;
   padding: 40px 20px;
@@ -156,4 +156,5 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 
