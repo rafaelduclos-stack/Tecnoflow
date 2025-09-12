@@ -1,284 +1,138 @@
-
-
+/* Reset geral */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0b1524 0%, #1b2a50 100%);
-    color: #fff;
-    min-height: 100vh;
-    padding: 40px 20px 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    margin-bottom: 40px;
-    text-align: center;
-    text-shadow: 0 0 8px #66aaffaa;
-  }
-
-  #curso-lista {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 50px;
-  }
-
-  .curso-item {
-    background: #0b1524cc;
-    padding: 30px 25px;
-    border-radius: 16px;
-    box-shadow: inset 0 0 14px #3a5ab8;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative;
-    user-select: none;
-  }
-
-  .curso-item:hover {
-    background-color: #1e326a;
-    transform: translateY(-6px);
-    box-shadow: 0 6px 24px #66aaff88;
-  }
-
-  .curso-info {
-    margin-bottom: 25px;
-  }
-
-  .curso-item strong {
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 15px;
-    color: #a0c4ff;
-    letter-spacing: 0.05em;
-  }
-
-  .curso-item p {
-    color: #cbd5e1cc;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    user-select: text;
-  }
-
-  .inscrever-btn {
-    background-color: #66aaff;
-    color: #0b1524;
-    border: none;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 1.15rem;
-    padding: 14px 30px;
-    cursor: pointer;
-    box-shadow: 0 0 15px #66aaffcc;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    user-select: none;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Ícone simples animado dentro do botão */
-  .inscrever-btn::after {
-    content: '→';
-    display: inline-block;
-    font-weight: 900;
-    font-size: 1.3rem;
-    margin-left: 8px;
-    transform: translateX(0);
-    transition: transform 0.3s ease;
-  }
-
-  .inscrever-btn:hover {
-    background-color: #4a8bd4;
-    box-shadow: 0 0 28px #66aaffee;
-    transform: scale(1.1);
-  }
-
-  .inscrever-btn:hover::after {
-    transform: translateX(6px);
-  }
-
-  form {
-    background: #122a57cc;
-    padding: 30px 40px;
-    border-radius: 16px;
-    max-width: 900px;
-    width: 100%;
-    box-shadow: 0 0 25px #66aaffaa;
-    color: #cbd5e1;
-    margin-bottom: 50px;
-  }
-
-  label {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
-  input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    padding: 14px 18px;
-    margin-top: 8px;
-    border-radius: 10px;
-    border: none;
-    background-color: #0b1524;
-    color: #cbd5e1;
-    font-size: 1.1rem;
-    box-shadow: inset 0 0 12px #3a5ab8;
-    transition: background-color 0.3s;
-  }
-
-  input[type="text"]:focus,
-  input[type="number"]:focus {
-    outline: none;
-    background-color: #1e326a;
-    box-shadow: 0 0 16px #66aaff;
-  }
-
-  button[type="submit"] {
-    margin-top: 30px;
-    background-color: #66aaff;
-    border: none;
-    color: #0b1524;
-    padding: 16px 38px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    border-radius: 14px;
-    cursor: pointer;
-    box-shadow: 0 0 20px #66aaffcc;
-    transition: background-color 0.3s, transform 0.3s;
-    user-select: none;
-    display: block;
-    margin-left: auto;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #4a8bd4;
-    transform: scale(1.1);
-  }
-
-  .mensagem {
-    margin-top: 25px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-align: center;
-    min-height: 30px;
-  }
-
-  .mensagem.erro {
-    color: #f44336;
-  }
-
-  .mensagem.sucesso {
-    color: #28a745;
-  }
-
-  .comissao {
-    background: #fff3cd;
-    border: 1px solid #ffeeba;
-    padding: 22px 28px;
-    margin-bottom: 50px;
-    border-radius: 16px;
-    color: #856404;
-    font-weight: 700;
-    max-width: 900px;
-    width: 100%;
-    box-shadow: 0 0 18px #ffeebaaa;
-    font-size: 1.15rem;
-    user-select: none;
-    text-align: center;
-  }
-
-  footer {
-    margin-top: auto;
-    background-color: #122a57;
-    width: 100%;
-    padding: 60px 0;
-    text-align: center;
-    box-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
-    user-select: none;
-  }
-
-  .footer-logo {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    font-size: 8rem;
-    color: white;
-    letter-spacing: 12px;
-    text-shadow: 0 0 30px #66aaffcc;
-    user-select: none;
-    margin-bottom: 10px;
-    line-height: 1;
-  }
-
-  /* Responsivadade
-  @media (max-width: 960px) {
-    #curso-lista {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    form, .comissao {
-      max-width: 100%;
-      padding: 25px 20px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    body {
-      padding: 30px 15px 80px;
-    }
-    h1, h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-    }
-    .footer-logo {
-      font-size: 4.5rem;
-      letter-spacing: 6px;
-    }
-
-  }
-
-.voltar-container {
-  margin: 20px 0 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.voltar-btn {
-  display: inline-block;
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0b1524 0%, #1b2a50 100%);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 0 0 8px #66aaffaa;
+}
+
+#curso-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 50px;
+}
+
+.curso-item {
+  background: #0b1524cc;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 14px #3a5ab8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+.curso-item:hover {
+  background-color: #1e326a;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 24px #66aaff88;
+}
+
+.curso-info {
+  margin-bottom: 25px;
+}
+
+.curso-item strong {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 15px;
+  color: #a0c4ff;
+  letter-spacing: 0.05em;
+}
+
+.curso-item p {
+  color: #cbd5e1cc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  user-select: text;
+}
+
+.inscrever-btn {
   background-color: #66aaff;
   color: #0b1524;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 14px 28px;
+  border: none;
   border-radius: 12px;
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 14px 30px;
+  cursor: pointer;
   box-shadow: 0 0 15px #66aaffcc;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.voltar-btn:hover {
-  background-color: #4a8bd4;
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #66aaffee;
+.inscrever-btn::after {
+  content: '→';
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-left: 8px;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
 }
+
+.inscrever-btn:hover {
+  background-color: #4a8bd4;
+  box-shadow: 0 0 28px #66aaffee;
+  transform: scale(1.1);
+}
+
+.inscrever-btn:hover::after {
+  transform: translateX(6px);
+}
+
+/* Formulário */
+form {
+  background: #122a57cc;
+  padding: 30px 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 25px #66aaffaa;
+  color: #cbd5e1;
+  margin-bottom: 50px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 8px;
+  border-radius: 10
