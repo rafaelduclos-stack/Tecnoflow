@@ -228,7 +228,7 @@
     line-height: 1;
   }
 
-  /* Responsividade */
+  /* Responsivadade
   @media (max-width: 960px) {
     #curso-lista {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -253,4 +253,32 @@
       font-size: 4.5rem;
       letter-spacing: 6px;
     }
+
   }
+
+.voltar-container {
+  margin: 20px 0 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1200px;
+}
+
+.voltar-btn {
+  display: inline-block;
+  background-color: #66aaff;
+  color: #0b1524;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #66aaffcc;
+  transition: all 0.3s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #4a8bd4;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #66aaffee;
+}
