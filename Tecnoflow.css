@@ -28,15 +28,9 @@ nav.sidebar {
     transition: transform 0.4s ease-in-out;
     z-index: 1000;
 }
-nav.sidebar.open {
-    transform: translateX(0);
-}
-nav.sidebar ul {
-    list-style: none;
-}
-nav.sidebar ul li {
-    margin: 15px 0;
-}
+nav.sidebar.open { transform: translateX(0); }
+nav.sidebar ul { list-style: none; }
+nav.sidebar ul li { margin: 15px 0; }
 nav.sidebar ul li a {
     display: flex;
     align-items: center;
@@ -83,15 +77,9 @@ nav.sidebar ul li a.active {
     border-radius: 3px;
     transition: 0.3s;
 }
-#menuBtn.open span.bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
-}
-#menuBtn.open span.bar:nth-child(2) {
-    opacity: 0;
-}
-#menuBtn.open span.bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
-}
+#menuBtn.open span.bar:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+#menuBtn.open span.bar:nth-child(2) { opacity: 0; }
+#menuBtn.open span.bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 
 header {
     position: relative;
@@ -152,9 +140,7 @@ header {
     user-select: none;
     transition: background 0.3s ease;
 }
-.login-btn:hover {
-    background: #3356cc;
-}
+.login-btn:hover { background: #3356cc; }
 
 main {
     padding: 40px 60px;
@@ -174,7 +160,7 @@ main h2 {
     text-shadow: 0 0 12px rgba(170, 196, 255, 0.95);
 }
 
-/* Mantém sempre 2 colunas */
+/* Sempre 2 colunas */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -213,9 +199,7 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
-.footer-content {
-    color: #fff;
-}
+.footer-content { color: #fff; }
 .footer-logo {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
@@ -237,19 +221,11 @@ footer a:hover {
     color: #fff;
     text-decoration: underline;
 }
-.social-links {
-    margin-top: 15px;
-}
+.social-links { margin-top: 15px; }
 
-/* 🔥 Força o celular a sempre mostrar como desktop */
+/* 🔥 Garante desktop no celular */
 @media (max-width: 768px) {
-    body {
-        overflow-x: auto;
-    }
-    main {
-        min-width: 1100px; /* força layout de desktop */
-    }
-    .videos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    body { overflow-x: auto; }
+    main { min-width: 1100px; }
+    .videos-grid { grid-template-columns: repeat(2, 1fr); }
 }
