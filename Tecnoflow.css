@@ -12,7 +12,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* ======== MENU LATERAL ======== */
+/* ======== SIDEBAR ======== */
 nav.sidebar {
     position: fixed;
     top: 0; left: 0;
@@ -25,13 +25,21 @@ nav.sidebar {
     box-shadow: 3px 0 10px #000a2f;
     padding-top: 20px;
     overflow-y: auto;
+
+    /* transição abrir/fechar */
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
     z-index: 1000;
 }
-nav.sidebar.open { transform: translateX(0); }
-nav.sidebar ul { list-style: none; }
-nav.sidebar ul li { margin: 15px 0; }
+nav.sidebar.open {
+    transform: translateX(0);
+}
+nav.sidebar ul {
+    list-style: none;
+}
+nav.sidebar ul li {
+    margin: 15px 0;
+}
 nav.sidebar ul li a {
     display: flex;
     align-items: center;
@@ -57,13 +65,13 @@ nav.sidebar ul li a.active {
     border-left-color: #ffffff;
 }
 
-/* ======== BOTÃO MENU ======== */
+/* ======== MENU HAMBÚRGUER ======== */
 #menuBtn {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    width: 32px;
-    height: 25px;
+    top: 20px;
+    left: 20px;
+    width: 45px;          /* largura maior */
+    height: 35px;         /* altura maior */
     cursor: pointer;
     z-index: 1100;
     display: flex;
@@ -73,14 +81,21 @@ nav.sidebar ul li a.active {
 }
 #menuBtn span.bar {
     display: block;
-    height: 4px;
+    height: 5px;          /* barras mais grossas */
+    width: 100%;
     background-color: #fff;
     border-radius: 3px;
     transition: 0.3s;
 }
-#menuBtn.open span.bar:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
-#menuBtn.open span.bar:nth-child(2) { opacity: 0; }
-#menuBtn.open span.bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+#menuBtn.open span.bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 7px);
+}
+#menuBtn.open span.bar:nth-child(2) {
+    opacity: 0;
+}
+#menuBtn.open span.bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+}
 
 /* ======== HEADER ======== */
 header {
@@ -89,8 +104,7 @@ header {
     height: 90px;
     width: 100%;
     background-image: url("BAGUI3.jpg");
-    background-size: 100% 100%;   /* cobre o header inteiro */
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
@@ -143,7 +157,9 @@ header {
     user-select: none;
     transition: background 0.3s ease;
 }
-.login-btn:hover { background: #3356cc; }
+.login-btn:hover {
+    background: #3356cc;
+}
 
 /* ======== MAIN ======== */
 main {
@@ -163,11 +179,9 @@ main h2 {
     padding-bottom: 10px;
     text-shadow: 0 0 12px rgba(170, 196, 255, 0.95);
 }
-
-/* ======== GRID VÍDEOS ======== */
 .videos-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 40px 60px;
     margin-top: 5px;
 }
@@ -195,7 +209,7 @@ main h2 {
     max-width: 90%;
 }
 
-/* ======== RODAPÉ ======== */
+/* ======== FOOTER ======== */
 footer {
     background-color: #122a57;
     width: 100%;
@@ -203,7 +217,9 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
-.footer-content { color: #fff; }
+.footer-content {
+    color: #fff;
+}
 .footer-logo {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
@@ -225,11 +241,12 @@ footer a:hover {
     color: #fff;
     text-decoration: underline;
 }
-.social-links { margin-top: 15px; }
+.social-links {
+    margin-top: 15px;
+}
 
-/* ======== MOBILE (ajuste automático versão PC) ======== */
+/* ======== MOBILE AJUSTE ======== */
 @media (max-width: 768px) {
     body { overflow-x: hidden; }
     main { width: 1100px; margin: 0 auto; }
-    .videos-grid { grid-template-columns: repeat(2, 1fr); }
 }
