@@ -12,6 +12,7 @@ html, body {
     overflow-x: hidden;
 }
 
+/* ======== MENU LATERAL ======== */
 nav.sidebar {
     position: fixed;
     top: 0; left: 0;
@@ -56,6 +57,7 @@ nav.sidebar ul li a.active {
     border-left-color: #ffffff;
 }
 
+/* ======== BOTÃO MENU ======== */
 #menuBtn {
     position: fixed;
     top: 15px;
@@ -68,7 +70,6 @@ nav.sidebar ul li a.active {
     flex-direction: column;
     justify-content: space-between;
     user-select: none;
-    border: #000a2f ;
 }
 #menuBtn span.bar {
     display: block;
@@ -81,13 +82,15 @@ nav.sidebar ul li a.active {
 #menuBtn.open span.bar:nth-child(2) { opacity: 0; }
 #menuBtn.open span.bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 
+/* ======== HEADER ======== */
 header {
     position: relative;
     top: 0; left: 0;
     height: 90px;
     width: 100%;
     background-image: url("BAGUI3.jpg");
-    background-size: cover;
+    background-size: 100% 100%;   /* cobre o header inteiro */
+    background-repeat: no-repeat;
     background-position: center;
     display: flex;
     align-items: center;
@@ -142,6 +145,7 @@ header {
 }
 .login-btn:hover { background: #3356cc; }
 
+/* ======== MAIN ======== */
 main {
     padding: 40px 60px;
     max-width: 1400px;
@@ -160,7 +164,7 @@ main h2 {
     text-shadow: 0 0 12px rgba(170, 196, 255, 0.95);
 }
 
-/* Sempre 2 colunas */
+/* ======== GRID VÍDEOS ======== */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -191,7 +195,7 @@ main h2 {
     max-width: 90%;
 }
 
-/* Rodapé */
+/* ======== RODAPÉ ======== */
 footer {
     background-color: #122a57;
     width: 100%;
@@ -223,9 +227,9 @@ footer a:hover {
 }
 .social-links { margin-top: 15px; }
 
-/* 🔥 Garante desktop no celular */
+/* ======== MOBILE (ajuste automático versão PC) ======== */
 @media (max-width: 768px) {
-    body { overflow-x: auto; }
-    main { min-width: 1100px; }
+    body { overflow-x: hidden; }
+    main { width: 1100px; margin: 0 auto; }
     .videos-grid { grid-template-columns: repeat(2, 1fr); }
 }
