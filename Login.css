@@ -204,3 +204,23 @@ button[type="submit"]:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
 
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; /* texto preto */
+  background: #fff; /* fundo branco */
+  text-decoration: none;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff inset;
+  transition: 0.3s, transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
+  background: linear-gradient(90deg, #fff, #ccc);
+}
