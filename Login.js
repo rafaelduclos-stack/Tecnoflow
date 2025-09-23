@@ -1,38 +1,48 @@
-const formTitle = document.getElementById('form-title');
-const loginForm = document.getElementById('login-form');
-const toggleText = document.getElementById('toggle-text');
+// Seleção de elementos
+const toggleLink = document.getElementById('toggleLink');
+const loginForm = document.getElementById('loginForm');
+const h2 = document.querySelector('.login-container h2');
 
 let isLogin = true;
 
-function toggleForm() {
+// Alterna entre login e cadastro
+toggleLink.addEventListener('click', function(e) {
+  e.preventDefault();
   isLogin = !isLogin;
-  formTitle.textContent = isLogin ? 'Entrar no TecnoFlow' : 'Registrar no TecnoFlow';
-  loginForm.querySelector('button').textContent = isLogin ? 'Entrar' : 'Registrar';
-  toggleText.innerHTML = isLogin
-    ? 'Ainda não tem uma conta? <a onclick="toggleForm()">Registrar</a>'
-    : 'Já tem uma conta? <a onclick="toggleForm()">Entrar</a>';
-  
-  loginForm.reset(); // limpa os campos ao alternar
-}
 
-// Validação simples
-loginForm.addEventListener('submit', function(event) {
-  event.preventDefault();
+  if(isLogin) {
+    h2.textContent = "Bem-vindo";
+    toggleLink.textContent = "Cadastre-se";
+    loginForm.querySelector('button').textContent = "Entrar";
+  } else {
+    h2.textContent = "Crie sua conta";
+    toggleLink.textContent = "Login";
+    loginForm.querySelector('button').textContent = "Cadastrar";
+  }
 
+  loginForm.reset();
+});
+
+// Validação simples do formulário
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
   const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value;
+  const senha = document.getElementById('senha').value.trim();
 
-  if (email === '' || password === '') {
-    alert('Preencha todos os campos!');
+  if(email === "" || senha === "") {
+    alert("Por favor, preencha todos os campos.");
     return;
   }
 
-  if (isLogin) {
-    alert(`✅ Login realizado com: ${email}`);
-    // Exemplo: window.location.href = "home.html";
+  if(!email.includes("@")) {
+    alert("Digite um e-mail válido.");
+    return;
+  }
+
+  if(isLogin) {
+    alert(`Login realizado com sucesso!\nEmail: ${email}`);
   } else {
-    alert(`✅ Conta registrada para: ${email}`);
-    // Exemplo: salvar em localStorage simulado
+    alert(`Conta criada com sucesso!\nEmail: ${email}`);
   }
 
   loginForm.reset();
