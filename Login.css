@@ -22,7 +22,7 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('imagens/fotologo.jpg') no-repeat center center/cover;
+  background: url('fotologo.jpg') no-repeat center center/cover;
   filter: grayscale(100%) brightness(15%);
   z-index: 1;
   animation: bgMove 30s ease-in-out infinite alternate;
@@ -181,3 +181,4 @@ button[type="submit"]:hover {
 .toggle-form a:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
+
