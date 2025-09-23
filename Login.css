@@ -22,7 +22,7 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('fotologo.jpg') no-repeat center center/cover;
+  background: url('imagens/fotologo.jpg') no-repeat center center/cover;
   filter: grayscale(100%) brightness(15%);
   z-index: 1;
   animation: bgMove 30s ease-in-out infinite alternate;
@@ -57,7 +57,7 @@ body::before {
 /* Logo */
 .login-container .logo {
   width: 100px;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1.5rem 0;
   animation: logoPulse 2s infinite alternate;
 }
 
@@ -66,10 +66,11 @@ body::before {
   to { transform: scale(1.1); }
 }
 
+/* Título */
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   text-shadow: 0 0 8px #fff, 0 0 16px #fff;
   animation: glowText 2s infinite alternate;
 }
@@ -139,6 +140,27 @@ button[type="submit"]:hover {
   box-shadow: 0 0 20px #fff, 0 0 30px #fff inset;
 }
 
+/* Botão Página Principal */
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff inset;
+  transition: 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
+  background: linear-gradient(90deg, #fff, #ccc);
+}
+
 /* Social login apenas ícones */
 .social-login {
   display: flex;
@@ -181,4 +203,3 @@ button[type="submit"]:hover {
 .toggle-form a:hover {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
-
