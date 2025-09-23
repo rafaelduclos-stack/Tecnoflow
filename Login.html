@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - TecnoFlow</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="Login.css">
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Futurista Preto e Branco</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Entrar no TecnoFlow</h2>
-    <form id="login-form">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input type="password" id="password" required />
-      </div>
-      <div class="form-actions">
-        <button type="submit">Entrar</button>
-      </div>
-    </form>
 
-    <div class="social-login">
-      <button class="google-btn" onclick="alert('Login com Google em desenvolvimento')">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-          <path fill="#EA4335" d="M24 9.5c3.54 0 6.64 1.22 8.62 3.62l6.38-6.38C33.83 3.61 29.17 2 24 2 14.93 2 7.28 7.76 4.24 16.34l7.41 5.75C13.17 15.26 18.17 9.5 24 9.5z"/>
-          <path fill="#4285F4" d="M46.5 24c0-1.46-.13-2.89-.37-4.27H24v8.1h12.66c-.54 2.88-2.17 5.3-4.62 6.94l7.09 5.51C43.85 34.7 46.5 29.84 46.5 24z"/>
-          <path fill="#FBBC05" d="M11.65 28.08c-.54-1.62-.54-3.3 0-4.92V17.41l-7.41-5.75C2.66 17.34 2 20.57 2 24s.66 6.66 2.24 9.34l7.41-5.75v-.51z"/>
-          <path fill="#34A853" d="M24 46c5.17 0 9.83-1.61 13.11-4.38l-6.3-5.38c-2.03 1.36-4.6 2.16-7.1 2.16-5.83 0-10.83-5.76-11.39-13.09l-7.41 5.75C7.28 40.24 14.93 46 24 46z"/>
-          <path fill="none" d="M0 0h48v48H0z"/>
-        </svg>
-        Entrar
-      </button>
-      <button class="facebook-btn" onclick="alert('Login com Facebook em desenvolvimento')">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 6.013 4.388 10.987 10.125 11.854v-8.385H7.078v-3.47h3.047V9.413c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.954.926-1.954 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.06 24 18.086 24 12.073z"/>
-        </svg>
-        Entrar
-      </button>
+<div class="login-container">
+  <img src="imagens/fotologo.jpg" alt="Logo" class="logo">
+  <h2>Bem-vindo</h2>
+  <form id="loginForm">
+    <div class="form-group">
+      <input type="email" placeholder="Digite seu e-mail" id="email">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" class="icon" alt="Email">
     </div>
+    <div class="form-group">
+      <input type="password" placeholder="Digite sua senha" id="senha">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/password.png" class="icon" alt="Senha">
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
 
-    <div class="toggle-form">
-      <p>Ainda não tem uma conta? <a onclick="toggleForm()">Registrar</a></p>
-    </div>
-
-    <div class="go-home">
-      <a href="index.html" class="login-link">← Voltar para o Início</a>
-    </div>
+  <div class="social-login">
+    <button>
+      <img src="imagens/1.png" alt="Facebook">
+    </button>
+    <button>
+      <img src="imagens/2.png" alt="Instagram">
+    </button>
+    <button>
+      <img src="imagens/3.png" alt="TikTok">
+    </button>
   </div>
 
-  <script src="Login.js"></script>
-  
+  <div class="toggle-form">
+    <p>Não tem conta? <a href="#" id="toggleLink">Cadastre-se</a></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
