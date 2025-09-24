@@ -1,140 +1,54 @@
-/* Login.css */
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tecnoflow - Login Futurista</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Login.css">
+</head>
+<body>
 
-/* Fonte futurista */
-body {
-  font-family: 'Orbitron', sans-serif;
-  background-color: #121212; /* fundo preto */
-  color: #fff; /* texto branco */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+<div class="login-container">
+  <h2>Tecnoflow</h2>
+  <img src="fotologo.jpg" alt="Logo" class="logo">
 
-.login-container {
-  background-color: #1e1e1e; /* cinza escuro */
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  width: 350px;
-  text-align: center;
-}
+  <form>
+    <div class="form-group">
+      <input type="email" placeholder="Digite seu e-mail">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" class="icon" alt="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Digite sua senha">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/password.png" class="icon" alt="Senha">
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
 
-.login-container h2 {
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 2em;
-}
+  <div class="social-login">
+    <button>
+      <img src="1.png" alt="Facebook">
+    </button>
+    <button>
+      <img src="2.png" alt="Instagram">
+    </button>
+    <button>
+      <img src="3.png" alt="TikTok">
+    </button>
+  </div>
 
-.logo {
-  width: 80px;
-  margin-bottom: 20px;
-  border-radius: 50%;
-}
+  <!-- Botão abaixo das redes sociais -->
+  <a href="index.html" class="back-btn">Página Principal</a>
 
-.form-group {
-  position: relative;
-  margin-bottom: 20px;
-}
+  <div class="toggle-form">
+    <p>Não tem conta? <a href="#">Cadastre-se</a></p>
+  </div>
+  
+  <!-- Botão abaixo das redes sociais -->
+  <a href="index.html" class="back-btn">Página Principal</a>
+</div>
 
-.form-group input {
-  width: 100%;
-  padding: 12px 40px 12px 12px;
-  border: 2px solid #ccc; /* cinza claro */
-  border-radius: 10px;
-  background-color: #121212;
-  color: #fff;
-  font-size: 1em;
-  outline: none;
-  transition: border 0.3s;
-}
+  <script src="Login.js"></script>
 
-.form-group input::placeholder {
-  color: #bbb; /* cinza claro */
-}
-
-.form-group input:focus {
-  border-color: #fff;
-}
-
-.form-group .icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  opacity: 0.7;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  background-color: #fff;
-  color: #121212;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #ccc;
-}
-
-.social-login {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.social-login button {
-  background: none;
-  border: 2px solid #ccc;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.social-login button:hover {
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.social-login img {
-  width: 25px;
-  height: 25px;
-}
-
-.toggle-form p {
-  font-size: 0.9em;
-  color: #bbb;
-}
-
-.toggle-form a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.toggle-form a:hover {
-  text-decoration: underline;
-}
-
-.back-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.back-btn:hover {
-  background-color: #555;
-}
+</body>
+</html>
