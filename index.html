@@ -2,35 +2,14 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1100, initial-scale=0.25, maximum-scale=0.25, user-scalable=no">
-  <title>TecnoFlow - Blog de Tecnologia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoFlow - Portal de Tecnologia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script defer src="Tecnoflow.js"></script>
-  <link rel="stylesheet" type="text/css" href="Tecnoflow.css">
+  <link rel="stylesheet" href="Tecnoflow.css">
 </head>
 
 <body>
-<header>
-  <div class="logo">TecnoFlow</div>
-  <div class="search-bar">
-    <input type="text" placeholder="Pesquisar..." />
-    <a href="Login.html" class="login-btn">Login</a>
-  </div>
-
-  <video autoplay muted loop playsinline style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  ">
-    <source src="video.mp4" type="video/mp4">
-  </video>
-</header>
-
 <div id="menuBtn">
   <span class="bar"></span>
   <span class="bar"></span>
@@ -39,136 +18,200 @@
 
 <nav class="sidebar" id="sidebar">
   <ul>
-    <li><a href="#curiosidades"><i class="fas fa-lightbulb"></i> Curiosidades</a></li>
+    <li><a href="#videos" class="active"><i class="fas fa-play"></i> Vídeos</a></li>
+    <li><a href="#artigos"><i class="fas fa-newspaper"></i> Artigos</a></li>
+    <li><a href="#noticias"><i class="fas fa-bolt"></i> Notícias</a></li>
     <li><a href="#tutoriais"><i class="fas fa-book"></i> Tutoriais</a></li>
-    <li><a href="#noticias"><i class="fas fa-newspaper"></i> Notícias</a></li>
     <li><a href="Cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
-    <li><a href="Linguagem.html"><i class="fas fa-code"></i> Linguagem Prog</a></li>
+    <li><a href="Linguagem.html"><i class="fas fa-code"></i> Linguagens</a></li>
   </ul>
 </nav>
 
+<header>
+  <div class="header-left">
+    <!-- Botão do menu já está posicionado pelo CSS fixo -->
+  </div>
+  
+  <div class="header-center">
+    <div class="logo-container">
+      <svg class="logo-image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 15 L35 35 L35 25 L25 40 L25 60 L35 75 L35 65 L50 85 L65 65 L65 75 L75 60 L75 40 L65 25 L65 35 Z" 
+              fill="white" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="45" r="3" fill="white"/>
+      </svg>
+      <span class="logo-text">TecnoFlow</span>
+    </div>
+  </div>
+  
+  <div class="header-right">
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar conteúdo..." />
+      <a href="Login.html" class="login-btn">Entrar</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Bem-vindo ao TecnoFlow</h1>
+    <p class="hero-subtitle">Seu portal definitivo para tecnologia e inovação</p>
+  </div>
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
 <main id="mainContent">
-  <!-- ================= CURIOSIDADES ================= -->
-  <section id="curiosidades">
-    <h2>Curiosidades</h2>
-    <div class="videos-grid">
+  <!-- ================= VÍDEOS ================= -->
+  <section id="videos" class="section">
+    <h2>Vídeos em Destaque</h2>
+    <div class="content-grid videos-grid">
       <div class="video-card">
         <iframe src="https://www.youtube.com/embed/71xEB6i_xnc" allowfullscreen></iframe>
-        <p>Deixe o Seu Setup Mais Bonito e Gamer Com Itens Baratos Que Cabem No Seu Bolso.</p>
+        <p>Setup Gamer Barato: Transforme seu espaço com itens acessíveis</p>
       </div>
       <div class="video-card">
         <iframe src="https://www.youtube.com/embed/TGoxo09S-j0" allowfullscreen></iframe>
-        <p>Pc Gamer De R$1200 Reais Do Aliexpres, Mais Barato De 2025.</p>
+        <p>PC Gamer de R$1200: A melhor configuração custo-benefício de 2025</p>
       </div>
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/OsiE-bYhTJU" allowfullscreen></iframe>
-        <p>30 Gadgets de Tecnologia Mais Incríveis Da Amazon Em Julho de 2025.</p>
+        <iframe src="https://www.youtube.com/embed/mdPzHzpLEOE" allowfullscreen></iframe>
+        <p>Tutorial Completo: Monte seu PC do zero como um profissional</p>
       </div>
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/QYagIWHlvmA" allowfullscreen></iframe>
-        <p>Meu QUARTO/SETUP gamer 2025 - Bora Atualizar?</p>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/H25FttrK4tQ" allowfullscreen></iframe>
-        <p>Montei um PC GAMER baratinho do Aliexpress de R$1500 (Roda Tudo!)</p>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/k4Nlg5F9xJw" allowfullscreen></iframe>
-        <p>10 Mentiras Faladas Sobre os Computadores. Curiosidades Sobre os Computadores.</p>
+        <iframe src="https://www.youtube.com/embed/9ASWGtn7pCI" allowfullscreen></iframe>
+        <p>Kali Linux vs Ferramentas Populares: Análise completa para hackers éticos</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= TUTORIAIS ================= -->
-  <section id="tutoriais">
-    <h2>Tutoriais</h2>
-    <div class="videos-grid">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/mdPzHzpLEOE" allowfullscreen></iframe>
-        <p>Aprenda a montar seu próprio computador do zero!</p>
+  <!-- ================= ARTIGOS ================= -->
+  <section id="artigos" class="section">
+    <h2>Artigos Técnicos</h2>
+    <div class="content-grid articles-grid">
+      <div class="article-card">
+        <h3>Inteligência Artificial em 2025</h3>
+        <p>Explore as últimas tendências em IA, desde GPTs avançados até aplicações revolucionárias em diversos setores. Descubra como a IA está moldando o futuro da tecnologia.</p>
+        <div class="article-meta">
+          <span class="news-date">24 de Setembro, 2025</span>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/hvJeA1JCyso" allowfullscreen></iframe>
-        <p>Instalação e configuração do Windows passo a passo.</p>
+      <div class="article-card">
+        <h3>Computação Quântica Explicada</h3>
+        <p>Entenda os princípios fundamentais da computação quântica e como essa tecnologia promete revolucionar a computação tradicional nos próximos anos.</p>
+        <div class="article-meta">
+          <span class="news-date">22 de Setembro, 2025</span>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/B7fFBjMnIoA" allowfullscreen></iframe>
-        <p>Como instalar o Linux Ubuntu em seu PC.</p>
+      <div class="article-card">
+        <h3>Segurança Cibernética: Guia 2025</h3>
+        <p>Principais ameaças digitais e como se proteger. Um guia completo sobre as melhores práticas de segurança para usuários e empresas.</p>
+        <div class="article-meta">
+          <span class="news-date">20 de Setembro, 2025</span>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/AZ1drCVTDgs" allowfullscreen></iframe>
-        <p>Tutorial: Criando um site simples com HTML e CSS.</p>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/D6lKBOOVAVA?si=OXIxaSi5cTVd_uBS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>como criar uma maquina virtual.</p>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/lh_h-KdbBrE" allowfullscreen></iframe>
-        <p>Aprenda a editar vídeos usando DaVinci Resolve.</p>
+      <div class="article-card">
+        <h3>Desenvolvimento Web Moderno</h3>
+        <p>Frameworks, linguagens e ferramentas essenciais para desenvolvedores web em 2025. Aprenda sobre React, Vue.js, e as novidades do JavaScript.</p>
+        <div class="article-meta">
+          <span class="news-date">18 de Setembro, 2025</span>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= NOTÍCIAS ================= -->
-  <section id="noticias">
-    <h2>Notícias</h2>
-    <div class="videos-grid">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/vXqnZcTI_Fw" allowfullscreen></iframe>
-        <p>Montei um PC GAMER BARATO que RODA TUDO! (R$1600).</p>
+  <section id="noticias" class="section">
+    <h2>Últimas Notícias</h2>
+    <div class="content-grid news-grid">
+      <div class="news-card">
+        <div class="news-content">
+          <div class="news-date">Há 2 horas</div>
+          <h3>Apple anuncia novos chips M4 com arquitetura revolucionária</h3>
+          <p>A gigante de Cupertino revelou sua mais nova linha de processadores, prometendo 40% mais performance em comparação com a geração anterior.</p>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/9ASWGtn7pCI" allowfullscreen></iframe>
-        <p>Você realmente precisa de gadgets para hackear? Análise do Kali Linux vs. Ferramentas Populares.</p>
+      <div class="news-card">
+        <div class="news-content">
+          <div class="news-date">Há 5 horas</div>
+          <h3>Meta lança óculos de realidade aumentada para consumidores</h3>
+          <p>Os novos Meta AR Glasses prometen integrar perfeitamente o mundo digital com o físico, custando menos de $500.</p>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/9gNcCw5vNzo" allowfullscreen></iframe>
-        <p>Lançamentos de notebooks gamers em 2025.</p>
+      <div class="news-card">
+        <div class="news-content">
+          <div class="news-date">Há 1 dia</div>
+          <h3>OpenAI revela GPT-5: IA com capacidades sem precedentes</h3>
+          <p>A nova versão do ChatGPT demonstra habilidades de raciocínio avançadas e multimodalidade aprimorada.</p>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/QtvPP5KEWYk" allowfullscreen></iframe>
-        <p>Novidades sobre a inteligência artificial e seu impacto no mercado.</p>
+      <div class="news-card">
+        <div class="news-content">
+          <div class="news-date">Há 2 dias</div>
+          <h3>Tesla apresenta robô humanoide Optimus Gen-3</h3>
+          <p>O novo robô da Tesla promete revolucionar a automação doméstica e industrial com IA avançada.</p>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/s5w-cq5g85A" allowfullscreen></iframe>
-        <p>Apple anuncia novas tecnologias para o futuro.</p>
+    </div>
+  </section>
+
+  <!-- ================= TUTORIAIS ================= -->
+  <section id="tutoriais" class="section">
+    <h2>Tutoriais</h2>
+    <div class="content-grid articles-grid">
+      <div class="article-card">
+        <h3>Como criar uma API REST com Node.js</h3>
+        <p>Tutorial passo-a-passo para criar uma API robusta usando Node.js, Express e MongoDB. Inclui autenticação JWT e boas práticas.</p>
+        <div class="article-meta">
+          <span class="news-date">Iniciante - 30 min</span>
+          <a href="#" class="read-more">Começar</a>
+        </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/wnHW6o8WMas" allowfullscreen></iframe>
-        <p>Tecnologia quântica: o que esperar para os próximos anos.</p>
+      <div class="article-card">
+        <h3>Docker para Desenvolvedores</h3>
+        <p>Aprenda a containerizar suas aplicações com Docker. Do básico ao avançado, incluindo Docker Compose e orquestração.</p>
+        <div class="article-meta">
+          <span class="news-date">Intermediário - 45 min</span>
+          <a href="#" class="read-more">Começar</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <h3>Machine Learning com Python</h3>
+        <p>Introdução prática ao Machine Learning usando Python, pandas e scikit-learn. Projetos hands-on inclusos.</p>
+        <div class="article-meta">
+          <span class="news-date">Avançado - 60 min</span>
+          <a href="#" class="read-more">Começar</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <h3>Deploy de Apps na AWS</h3>
+        <p>Guia completo para fazer deploy de aplicações na Amazon Web Services. EC2, S3, RDS e mais.</p>
+        <div class="article-meta">
+          <span class="news-date">Intermediário - 40 min</span>
+          <a href="#" class="read-more">Começar</a>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-  <!-- Rodapé -->
 <footer>
   <div class="footer-content">
-    <div class="footer-logo">Tecnoflow</div>
-    <p>&copy; 2025 Tecnoflow - Seu blog de tecnologias - Todos os direitos reservados</p>
+    <div class="footer-logo">TecnoFlow</div>
+    <p>&copy; 2025 TecnoFlow - Portal de Tecnologia - Todos os direitos reservados</p>
     <div class="social-links">
       <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 </footer>
 
-<!-- Font Awesome (ícones) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
 <script src="Tecnoflow.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
