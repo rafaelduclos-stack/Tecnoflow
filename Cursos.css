@@ -1,164 +1,140 @@
-/* Reset geral */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; }
 body {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0b1524 0%, #1b2a50 100%);
-  color: #fff;
-  min-height: 100vh;
-  padding: 40px 20px 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family:'Roboto', sans-serif;
+  display:flex;
+  flex-direction:column;
+  background:#000;
+  color:#fff;
+  position:relative;
 }
 
-/* Cabeçalho */
+body::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url('fotologo.jpg') no-repeat center/cover;
+  filter:grayscale(100%) brightness(15%);
+  z-index:1;
+  animation:bgMove 30s ease-in-out infinite alternate;
+}
+@keyframes bgMove { 0%{transform:scale(1) translate(0,0);} 50%{transform:scale(1.05) translate(20px,20px);} 100%{transform:scale(1) translate(0,0);} }
+
+.container {
+  position:relative;
+  z-index:2;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:40px 20px 20px;
+}
+
 header {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align:center;
+  margin-bottom:20px;
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  font-size: 3rem;
-  text-shadow: 0 0 8px #66aaffaa;
+  font-family:'Orbitron', sans-serif;
+  font-size:3rem;
+  color:#fff;
+  text-shadow:0 0 8px #fff,0 0 16px #aaa;
 }
 
-/* Voltar botão */
+header img {
+  width:120px;
+  margin-top:10px;
+  animation:logoPulse 2s infinite alternate;
+}
+@keyframes logoPulse { from{transform:scale(1);} to{transform:scale(1.1);} }
+
 .voltar-container {
-  margin: 20px 0 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  max-width: 1200px;
+  margin:20px 0 40px;
+  width:100%;
+  display:flex;
+  justify-content:flex-start;
+  max-width:1200px;
 }
 
 .voltar-btn {
-  display: inline-block;
-  background-color: #66aaff;
-  color: #0b1524;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 14px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 0 15px #66aaffcc;
-  transition: all 0.3s ease;
+  display:inline-block;
+  background-color:#fff;
+  color:#000;
+  font-weight:700;
+  font-size:1.1rem;
+  padding:14px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  box-shadow:0 0 10px #fff,0 0 20px #fff inset;
+  transition:all 0.3s ease;
 }
-
 .voltar-btn:hover {
-  background-color: #4a8bd4;
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #66aaffee;
+  transform:scale(1.05);
+  box-shadow:0 0 20px #fff,0 0 40px #fff inset;
+  background:#ccc;
 }
 
-/* Cards de Cursos */
 .curso-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:30px;
+  width:100%;
+  max-width:1200px;
+  margin-bottom:50px;
 }
 
 .curso-card {
-  background: #1c2a45;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background:#000;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 0 20px #fff33,0 0 10px #fff inset;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .curso-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  transform:translateY(-6px);
+  box-shadow:0 0 40px #fff55,0 0 15px #fff inset;
 }
-
 .curso-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  filter:grayscale(100%);
 }
-
-.curso-info {
-  padding: 20px;
-}
-
-.curso-info h3 {
-  font-size: 1.5rem;
-  color: #a0c4ff;
-  margin-bottom: 10px;
-}
-
-.curso-info p {
-  font-size: 1.1rem;
-  color: #cbd5e1;
-  margin-bottom: 20px;
-}
-
+.curso-info { padding:20px; }
+.curso-info h3 { font-size:1.5rem; color:#fff; margin-bottom:10px; text-shadow:0 0 5px #fff; }
+.curso-info p { font-size:1.1rem; color:#aaa; margin-bottom:20px; }
 .inscrever-btn {
-  background-color: #66aaff;
-  color: #0b1524;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  padding: 12px 24px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #66aaffcc;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color:#fff;
+  color:#000;
+  border:none;
+  border-radius:8px;
+  font-weight:700;
+  font-size:1.15rem;
+  padding:12px 24px;
+  cursor:pointer;
+  box-shadow:0 0 10px #fff33;
+  transition:transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
 .inscrever-btn:hover {
-  background-color: #4a8bd4;
-  box-shadow: 0 0 28px #66aaffee;
-  transform: scale(1.1);
+  background-color:#ccc;
+  box-shadow:0 0 20px #fff55;
+  transform:scale(1.1);
 }
 
-/* Rodapé */
 footer {
-  position: absolute;
-  bottom: 0;
-  margin: auto;
-  background-color: #122a57;
-  width: 100%;
-  padding: 15px 20px;
-  text-align: center;
+  background-color:#111;
+  width:100%;
+  padding:15px 20px;
+  text-align:center;
+  flex-shrink:0;
 }
-
-.footer-content {
-  color: #fff;
+footer .footer-logo {
+  font-family:'Orbitron', sans-serif;
+  font-weight:900;
+  font-size:2rem;
+  color:#fff;
+  margin-bottom:10px;
 }
-
-.footer-logo {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: 3rem;
-  color: #66aaff;
-  margin-bottom: 10px;
-}
-
-footer p {
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-footer a {
-  color: #66aaff;
-  text-decoration: none;
-  margin-left: 15px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-
-
+footer p, footer a { color:#aaa; margin-top:5px; }
+footer a:hover { color:#fff; text-decoration:underline; }
