@@ -13,7 +13,6 @@ body::before {
   content:'';
   position:absolute;
   inset:0;
-  background:url('fotologo.jpg') no-repeat center/cover;
   filter:grayscale(100%) brightness(15%);
   z-index:1;
   animation:bgMove 30s ease-in-out infinite alternate;
@@ -151,3 +150,4 @@ footer .footer-logo {
 }
 footer p, footer a { color:#aaa; margin-top:5px; }
 footer a:hover { color:#fff; text-decoration:underline; }
+
