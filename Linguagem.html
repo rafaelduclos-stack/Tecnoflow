@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linguagens de Programação e Seus Usos</title>
-  <link rel="stylesheet" type="text/css" href="Linguagens.css">
+  <title>Tecnoflow - Linguagens de Programação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Tarefa.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <a href="index.html" class="voltar">← Voltar para o Início</a>
 
-  <header>
-    <h1>Linguagens de Programação e Seus Usos</h1>
-    <p>Aprenda sobre as linguagens mais usadas no desenvolvimento de software e suas principais utilidades.</p>
-  </header>
+<header>
+  <div class="logo">
+    <img src="fotologo.jpg" alt="Logo"/>
+    <span class="logo-text">Tecnoflow</span>
+  </div>
+</header>
 
-  <section id="linguagens">
-    <div class="linguagem" data-name="C">
-      <h2>C</h2>
-      <p><strong>Para que serve:</strong> Sistemas operacionais, embarcados.</p>
-      <p><strong>Exemplo:</strong> Linux, drivers.</p>
+<section class="hero">
+  <h1>Explore as Linguagens</h1>
+  <p>Clique nos cards para descobrir mais</p>
+</section>
+
+<section class="section">
+  <h2>Linguagens Populares</h2>
+  <div class="grid">
+    <!-- Exemplo de cards -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">C</div>
+        <div class="card-back">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg" alt="C"/>
+          <p>Base para sistemas e softwares de alto desempenho.</p>
+        </div>
+      </div>
     </div>
-    <div class="linguagem" data-name="C++">
-      <h2>C++</h2>
-      <p><strong>Para que serve:</strong> Jogos, simuladores, tempo real.</p>
-      <p><strong>Exemplo:</strong> Unreal Engine.</p>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">Python</div>
+        <div class="card-back">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"/>
+          <p>IA, ciência de dados, automação e web.</p>
+        </div>
+      </div>
     </div>
-    <div class="linguagem" data-name="Java">
-      <h2>Java</h2>
-      <p><strong>Para que serve:</strong> Aplicativos Android, empresas.</p>
-      <p><strong>Exemplo:</strong> Android, sistemas bancários.</p>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">JavaScript</div>
+        <div class="card-back">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"/>
+          <p>Essencial para páginas web interativas.</p>
+        </div>
+      </div>
     </div>
-    <div class="linguagem" data-name="Python">
-      <h2>Python</h2>
-      <p><strong>Para que serve:</strong> IA, web, automação.</p>
-      <p><strong>Exemplo:</strong> TensorFlow, Flask.</p>
-    </div>
-    <div class="linguagem" data-name="JavaScript">
-      <h2>JavaScript</h2>
-      <p><strong>Para que serve:</strong> Web dinâmica, front/back-end.</p>
-      <p><strong>Exemplo:</strong> React, Node.js.</p>
-    </div>
-    <div class="linguagem" data-name="PHP">
-      <h2>PHP</h2>
-      <p><strong>Para que serve:</strong> Web backend.</p>
-      <p><strong>Exemplo:</strong> WordPress.</p>
-    </div>
-    <div class="linguagem" data-name="Go">
-      <h2>Go (Golang)</h2>
-      <p><strong>Para que serve:</strong> Serviços web rápidos.</p>
-      <p><strong>Exemplo:</strong> Google Cloud.</p>
-    </div>
-    <div class="linguagem" data-name="R">
-      <h2>R</h2>
-      <p><strong>Para que serve:</strong> Estatísticas e dados.</p>
-      <p><strong>Exemplo:</strong> Finanças, ciência.</p>
-    </div>
-    <div class="linguagem" data-name="SQL">
-      <h2>SQL</h2>
-      <p><strong>Para que serve:</strong> Banco de dados.</p>
-      <p><strong>Exemplo:</strong> MySQL, PostgreSQL.</p>
-    </div>
-    <div class="linguagem" data-name="HTML">
-      <h2>HTML</h2>
-      <p><strong>Para que serve:</strong> Estrutura de páginas web.</p>
-      <p><strong>Exemplo:</strong> Sites, blogs.</p>
-    </div>
-    <div class="linguagem" data-name="CSS">
-      <h2>CSS</h2>
-      <p><strong>Para que serve:</strong> Estilização web.</p>
-      <p><strong>Exemplo:</strong> Layouts, temas.</p>
-    </div>
-    <div class="linguagem" data-name="MATLAB">
-      <h2>MATLAB</h2>
-      <p><strong>Para que serve:</strong> Matemática e engenharia.</p>
-      <p><strong>Exemplo:</strong> Simulações científicas.</p>
-    </div>
-  </section>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <img src="fotologo.jpg" alt="Logo"/>
+    <span>Tecnoflow</span>
+  </div>
+  <p>&copy; 2025 - Portal de Programação - Todos os direitos reservados</p>
+  <div class="socials">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<!-- JavaScript embutido -->
+<script>
+  // Flip nos cards
+  document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  });
+</script>
+
 </body>
 </html>
-
-
