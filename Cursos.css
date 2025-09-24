@@ -121,51 +121,14 @@ header img {
   transform:scale(1.1);
 }
 
-/* Adicionar novo curso */
-.adicionar-curso {
-  background: #111;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 15px #444;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  text-align: center;
-}
-.adicionar-curso h2 {
+/* Títulos de cursos */
+.titulo-cursos {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
   color: #fff;
-  text-shadow: 0 0 5px #888;
-}
-.adicionar-curso form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.adicionar-curso input, 
-.adicionar-curso button {
-  padding: 12px;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: none;
-}
-.adicionar-curso input {
-  background: #222;
-  color: #fff;
-  border: 1px solid #555;
-}
-.adicionar-curso button {
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-.adicionar-curso button:hover {
-  background: #ccc;
-  transform: scale(1.05);
+  text-align: center;
+  margin: 60px 0 30px;
+  text-shadow: 0 0 8px #fff, 0 0 16px #aaa;
 }
 
 /* Footer */
@@ -198,7 +161,7 @@ footer a:hover {
   .curso-info h3 { font-size:1.3rem; }
   .curso-info p { font-size:1rem; }
   .inscrever-btn { font-size:1rem; padding:10px 20px; }
-  .adicionar-curso h2 { font-size:1.5rem; }
+  .titulo-cursos { font-size:2rem; }
 }
 @media (max-width:480px){
   header img { width:80px; }
