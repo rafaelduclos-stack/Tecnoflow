@@ -1,433 +1,231 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+<title>Tecnoflow - Gamer Zone</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 2px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 50px; }
+.logo h1 { color: red; font-size: 1.8rem; font-weight: bold; }
+nav a { color: #fff; margin: 0 15px; text-decoration: none; transition: 0.3s; }
+nav a:hover { color: red; }
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 10; /* menos borrado */
+}
+.hero h2 {
+  font-size: 3rem;
+  color: whithe;
+  text-shadow: 0 0 10px red; /* menos sombra para mais clareza */
+  position: relative;
+  top: -100px; /* sobe o título */
+}
+.produtos {
+  padding: 60px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover { transform: translateY(-5px); border-color: red; box-shadow: 0 0 15px red; }
+.card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+.card h3 { margin: 10px 0; }
+.card span { color: red; font-size: 1.2rem; font-weight: bold; }
+.card button { margin: 8px; padding: 10px 20px; border: none; border-radius: 25px; background: red; color: white; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.card button:hover { background: #ff3333; box-shadow: 0 0 10px red; }
+.descricao-box {
+  background: #0d0d0d;
+  border-top: 1px solid #222;
+  margin-top: 10px;
+  padding: 10px;
+  color: #ccc;
+  font-size: 0.9rem;
+  display: none;
+}
+.carrinho {
+  position: fixed;
+  top: 0; right: -400px;
+  width: 350px; height: 100%;
+  background: #111;
+  border-left: 2px solid red;
+  transition: 0.4s;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+}
+.carrinho.aberto { right: 0; }
+.carrinho h3 { color: red; text-align: center; margin-bottom: 20px; }
+.item-carrinho { border-bottom: 1px solid #333; padding: 10px 0; display: flex; justify-content: space-between; }
+#carrinhoBtn { background: red; border: none; padding: 10px 20px; border-radius: 25px; color: white; font-weight: bold; cursor: pointer; }
+#carrinhoBtn:hover { background: #ff3333; }
+button#finalizar { width: 100%; margin-top: 20px; background: red; padding: 12px; border-radius: 25px; color: #fff; font-weight: bold; }
+button#finalizar:hover { background: #ff3333; }
 
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TecnoFlow - Portal de Tecnologia</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="Tecnoflow.css">
-
+footer {
+  background: #111;
+  padding: 40px 20px;
+  color: #888;
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: 50px;
+}
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+footer a {
+  color: red;
+  text-decoration: none;
+  margin: 0 5px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
-
-
-
 <body>
-
-<div id="menuBtn">
-
-  <span class="bar"></span>
-
-  <span class="bar"></span>
-
-  <span class="bar"></span>
-
-</div>
-
-
-
-<nav class="sidebar" id="sidebar">
-
-  <ul>
-
-    <li><a href="#videos" class="active"><i class="fas fa-play"></i> Vídeos</a></li>
-
-    <li><a href="#artigos"><i class="fas fa-newspaper"></i> Artigos</a></li>
-
-    <li><a href="#noticias"><i class="fas fa-bolt"></i> Notícias</a></li>
-
-    <li><a href="#tutoriais"><i class="fas fa-book"></i> Tutoriais</a></li>
-
-    <li><a href="Cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
-
-  
-  </ul>
-
-</nav>
-
-
-
 <header>
-
-  <div class="header-left">
-
-    <!-- Botão do menu já está posicionado pelo CSS fixo -->
-
+  <div class="logo">
+    <img src="logo.jpg" alt="Logo Tecnoflow">
+    <h1>Tecnoflow</h1>
   </div>
-
-  
-
-  <div class="header-center">
-
-    <div class="logo-container">
-
-      <svg class="logo-image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-        <path d="M50 15 L35 35 L35 25 L25 40 L25 60 L35 75 L35 65 L50 85 L65 65 L65 75 L75 60 L75 40 L65 25 L65 35 Z" 
-
-              fill="white" stroke="white" stroke-width="2"/>
-
-        <circle cx="50" cy="45" r="3" fill="white"/>
-
-      </svg>
-
-      <span class="logo-text">TecnoFlow</span>
-
-    </div>
-
-  </div>
-
-  
-
-  <div class="header-right">
-
-    <div class="search-bar">
-
-      <input type="text" placeholder="Pesquisar conteúdo..." />
-
-      <a href="Login.html" class="login-btn">Entrar</a>
-
-    </div>
-
-  </div>
-
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <button id="carrinhoBtn">🛍️🛒Carrinho</button>
+  </nav>
 </header>
 
-
-
-<section class="hero-section">
-
-  <div class="hero-content">
-
-    <h1 class="hero-title">Bem-vindo ao TecnoFlow</h1>
-
-    <p class="hero-subtitle">Seu portal definitivo para tecnologia e inovação</p>
-
-  </div>
-
-  <div class="scroll-indicator">
-
-    <i class="fas fa-chevron-down"></i>
-
-  </div>
-
+<section class="hero">
+  <video autoplay muted loop>
+    <source src="video.carro.mp4" type="video/mp4">
+  </video>
+  <h2>Bem vindos ao Tecnoshopp</h2>
 </section>
 
-
-
-<main id="mainContent">
-
-  <!-- ================= VÍDEOS ================= -->
-
-  <section id="videos" class="section">
-
-    <h2>Vídeos em Destaque</h2>
-
-    <div class="content-grid videos-grid">
-
-      <div class="video-card">
-
-        <iframe src="https://www.youtube.com/embed/71xEB6i_xnc" allowfullscreen></iframe>
-
-        <p>Setup Gamer Barato: Transforme seu espaço com itens acessíveis</p>
-
-      </div>
-
-      <div class="video-card">
-
-        <iframe src="https://www.youtube.com/embed/TGoxo09S-j0" allowfullscreen></iframe>
-
-        <p>PC Gamer de R$1200: A melhor configuração custo-benefício de 2025</p>
-
-      </div>
-
-      <div class="video-card">
-
-        <iframe src="https://www.youtube.com/embed/mdPzHzpLEOE" allowfullscreen></iframe>
-
-        <p>Tutorial Completo: Monte seu PC do zero como um profissional</p>
-
-      </div>
-
-      <div class="video-card">
-
-        <iframe src="https://www.youtube.com/embed/9ASWGtn7pCI" allowfullscreen></iframe>
-
-        <p>Kali Linux vs Ferramentas Populares: Análise completa para hackers éticos</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ================= ARTIGOS ================= -->
-
-  <section id="artigos" class="section">
-
-    <h2>Artigos Técnicos</h2>
-
-    <div class="content-grid articles-grid">
-
-      <div class="article-card">
-
-        <h3>Inteligência Artificial em 2025</h3>
-
-        <p>Explore as últimas tendências em IA, desde GPTs avançados até aplicações revolucionárias em diversos setores. Descubra como a IA está moldando o futuro da tecnologia.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">24 de Setembro, 2025</span>
-
-          <a href="#" class="read-more">Ler mais</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Computação Quântica Explicada</h3>
-
-        <p>Entenda os princípios fundamentais da computação quântica e como essa tecnologia promete revolucionar a computação tradicional nos próximos anos.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">22 de Setembro, 2025</span>
-
-          <a href="#" class="read-more">Ler mais</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Segurança Cibernética: Guia 2025</h3>
-
-        <p>Principais ameaças digitais e como se proteger. Um guia completo sobre as melhores práticas de segurança para usuários e empresas.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">20 de Setembro, 2025</span>
-
-          <a href="#" class="read-more">Ler mais</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Desenvolvimento Web Moderno</h3>
-
-        <p>Frameworks, linguagens e ferramentas essenciais para desenvolvedores web em 2025. Aprenda sobre React, Vue.js, e as novidades do JavaScript.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">18 de Setembro, 2025</span>
-
-          <a href="#" class="read-more">Ler mais</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ================= NOTÍCIAS ================= -->
-
-  <section id="noticias" class="section">
-
-    <h2>Últimas Notícias</h2>
-
-    <div class="content-grid news-grid">
-
-      <div class="news-card">
-
-        <div class="news-content">
-
-          <div class="news-date">Há 2 horas</div>
-
-          <h3>Apple anuncia novos chips M4 com arquitetura revolucionária</h3>
-
-          <p>A gigante de Cupertino revelou sua mais nova linha de processadores, prometendo 40% mais performance em comparação com a geração anterior.</p>
-
-        </div>
-
-      </div>
-
-      <div class="news-card">
-
-        <div class="news-content">
-
-          <div class="news-date">Há 5 horas</div>
-
-          <h3>Meta lança óculos de realidade aumentada para consumidores</h3>
-
-          <p>Os novos Meta AR Glasses prometen integrar perfeitamente o mundo digital com o físico, custando menos de $500.</p>
-
-        </div>
-
-      </div>
-
-      <div class="news-card">
-
-        <div class="news-content">
-
-          <div class="news-date">Há 1 dia</div>
-
-          <h3>OpenAI revela GPT-5: IA com capacidades sem precedentes</h3>
-
-          <p>A nova versão do ChatGPT demonstra habilidades de raciocínio avançadas e multimodalidade aprimorada.</p>
-
-        </div>
-
-      </div>
-
-      <div class="news-card">
-
-        <div class="news-content">
-
-          <div class="news-date">Há 2 dias</div>
-
-          <h3>Tesla apresenta robô humanoide Optimus Gen-3</h3>
-
-          <p>O novo robô da Tesla promete revolucionar a automação doméstica e industrial com IA avançada.</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ================= TUTORIAIS ================= -->
-
-  <section id="tutoriais" class="section">
-
-    <h2>Tutoriais</h2>
-
-    <div class="content-grid articles-grid">
-
-      <div class="article-card">
-
-        <h3>Como criar uma API REST com Node.js</h3>
-
-        <p>Tutorial passo-a-passo para criar uma API robusta usando Node.js, Express e MongoDB. Inclui autenticação JWT e boas práticas.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">Iniciante - 30 min</span>
-
-          <a href="#" class="read-more">Começar</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Docker para Desenvolvedores</h3>
-
-        <p>Aprenda a containerizar suas aplicações com Docker. Do básico ao avançado, incluindo Docker Compose e orquestração.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">Intermediário - 45 min</span>
-
-          <a href="#" class="read-more">Começar</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Machine Learning com Python</h3>
-
-        <p>Introdução prática ao Machine Learning usando Python, pandas e scikit-learn. Projetos hands-on inclusos.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">Avançado - 60 min</span>
-
-          <a href="#" class="read-more">Começar</a>
-
-        </div>
-
-      </div>
-
-      <div class="article-card">
-
-        <h3>Deploy de Apps na AWS</h3>
-
-        <p>Guia completo para fazer deploy de aplicações na Amazon Web Services. EC2, S3, RDS e mais.</p>
-
-        <div class="article-meta">
-
-          <span class="news-date">Intermediário - 40 min</span>
-
-          <a href="#" class="read-more">Começar</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-
-<footer>
-
-  <div class="footer-content">
-
-    <div class="footer-logo">TecnoFlow</div>
-
-    <p>&copy; 2025 TecnoFlow - Portal de Tecnologia - Todos os direitos reservados</p>
-
-    <div class="social-links">
-
-      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-
-      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-
-      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-
-    </div>
-
+<section class="produtos" id="produtos">
+  <div class="card">
+    <img src="teclado.avif" alt="Teclado Gamer">
+    <h3>Teclado Mecânico RGB</h3>
+    <span>R$ 349,90</span><br>
+    <button class="toggleDesc">Descrição</button>
+    <button class="comprar">Comprar Agora</button>
+    <div class="descricao-box">Switches vermelhos, iluminação RGB completa, cabo trançado e estrutura em alumínio.</div>
   </div>
 
+  <div class="card">
+    <img src="mouse.avif" alt="Mouse Gamer">
+    <h3>Mouse Redfire 16000 DPI</h3>
+    <span>R$ 249,90</span><br>
+    <button class="toggleDesc">Descrição</button>
+    <button class="comprar">Comprar Agora</button>
+    <div class="descricao-box">Sensor óptico ultra preciso, 7 botões programáveis e iluminação RGB dinâmica.</div>
+  </div>
+
+  <div class="card">
+    <img src="headset.avif" alt="Headset Gamer">
+    <h3>Headset Inferno 7.1</h3>
+    <span>R$ 499,90</span><br>
+    <button class="toggleDesc">Descrição</button>
+    <button class="comprar">Comprar Agora</button>
+    <div class="descricao-box">Som surround imersivo 7.1, microfone removível e almofadas de couro sintético.</div>
+  </div>
+</section>
+
+<div class="carrinho" id="carrinho">
+  <h3>Seu Carrinho</h3>
+  <div id="itensCarrinho"></div>
+  <button id="finalizar">Finalizar Compra</button>
+</div>
+
+<footer>
+  <p>&copy; Tecnoflow - Todos os direitos reservados ao Tecnoshopp.</p>
+  <p>
+    <a href="#">Termos de Uso ao tecnoflow</a> |
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Contato tecnoflow</a>
+  </p>
 </footer>
 
+<script>
+const carrinhoBtn = document.getElementById('carrinhoBtn');
+const carrinho = document.getElementById('carrinho');
+const itensCarrinho = document.getElementById('itensCarrinho');
+const botoesComprar = document.querySelectorAll('.comprar');
+const botoesDesc = document.querySelectorAll('.toggleDesc');
+let itens = [];
 
+carrinhoBtn.addEventListener('click', () => {
+  carrinho.classList.toggle('aberto');
+});
 
-<script src="Tecnoflow.js"></script>
+botoesComprar.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const card = e.target.closest('.card');
+    const nome = card.querySelector('h3').textContent;
+    const preco = card.querySelector('span').textContent;
+    itens.push({ nome, preco });
+    atualizarCarrinho();
+  });
+});
 
+function atualizarCarrinho() {
+  itensCarrinho.innerHTML = '';
+  itens.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('item-carrinho');
+    div.innerHTML = `<span>${item.nome}</span><span>${item.preco}</span>`;
+    itensCarrinho.appendChild(div);
+  });
+}
+
+botoesDesc.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const box = e.target.nextElementSibling.nextElementSibling;
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
 </body>
-
 </html>
-
