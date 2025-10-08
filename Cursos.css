@@ -239,3 +239,38 @@ footer a:hover {
   .curso-container { gap:15px; }
   .curso-card { border-width:1px; }
 }
+
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5; /* ajuste a transparência */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  font-size: 24px;
+  z-index: 1;
+}
