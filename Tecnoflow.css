@@ -365,3 +365,36 @@ main {
     font-size: 1.8rem;
   }
 }
+/* Ajuste do tamanho das imagens e vídeos */
+.article-image, .news-image {
+  width: 100%;
+  max-height: 120px; /* altura menor */
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.video-card iframe {
+  width: 100%;
+  max-height: 150px; /* altura menor para vídeos */
+  border-radius: 8px;
+}
+
+/* Responsivo para tablets e celulares */
+@media (max-width: 768px) {
+  .article-image, .news-image {
+    max-height: 100px;
+  }
+  .video-card iframe {
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-image, .news-image {
+    max-height: 80px;
+  }
+  .video-card iframe {
+    max-height: 100px;
+  }
+}
