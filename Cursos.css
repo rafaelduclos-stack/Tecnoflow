@@ -1,136 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html, body { height:100%; }
+html, body {
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
-  font-family:'Roboto', sans-serif;
-  display:flex;
-  flex-direction:column;
-  background:#000;
-  color:#fff;
-  position:relative;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  position: relative;
 }
 
 .container {
-  position:relative;
-  z-index:2;
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:40px 20px 20px;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 20px;
 }
 
+/* ===== Hero Section com vídeo ===== */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* ===== Header ===== */
 header {
-  text-align:center;
-  margin-bottom:20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-h1 {
-  font-family:'Orbitron', sans-serif;
-  font-size:3rem;
-  color:#fff;
-  text-shadow:0 0 8px #fff,0 0 16px #aaa;
-}
-header img {
-  width:120px;
-  margin-top:10px;
-  animation:logoPulse 2s infinite alternate;
-}
-@keyframes logoPulse { from{transform:scale(1);} to{transform:scale(1.1);} }
 
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 16px #aaa;
+}
+
+header img {
+  width: 120px;
+  margin-top: 10px;
+  animation: logoPulse 2s infinite alternate;
+}
+
+@keyframes logoPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* ===== Botão Voltar ===== */
 .voltar-container {
-  margin:20px 0 40px;
-  width:100%;
-  display:flex;
-  justify-content:flex-start;
-  max-width:1200px;
+  margin: 20px 0 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1200px;
 }
+
 .voltar-btn {
-  display:inline-block;
-  background-color:#fff;
-  color:#000;
-  font-weight:700;
-  font-size:1.1rem;
-  padding:14px 28px;
-  border-radius:12px;
-  text-decoration:none;
-  box-shadow:0 0 10px #fff,0 0 20px #fff inset;
-  transition:all 0.3s ease;
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff inset;
+  transition: all 0.3s ease;
 }
+
 .voltar-btn:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 20px #fff,0 0 40px #fff inset;
-  background:#ccc;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
+  background: #ccc;
 }
 
 /* ===== Títulos das áreas ===== */
 .titulo-cursos {
-  font-family:'Orbitron', sans-serif;
-  font-size:2.5rem;
-  color:#fff;
-  text-align:center;
-  margin:60px 0 30px;
-  text-shadow:0 0 8px #fff,0 0 16px #aaa,0 0 25px #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 60px 0 30px;
+  text-shadow: 0 0 8px #fff, 0 0 16px #aaa, 0 0 25px #fff;
 }
 
 /* ===== Cursos ===== */
 .curso-container {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:20px;
-  width:100%;
-  max-width:1200px;
-  margin-bottom:50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 50px;
 }
 
 .curso-card {
-  background:#000;
-  border-radius:16px;
-  overflow:hidden;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
   border: 2px solid #555;
-  box-shadow:0 0 20px #fff3,0 0 10px #fff inset;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px #fff3, 0 0 10px #fff inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .curso-card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 0 40px #fff5,0 0 15px #fff inset;
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px #fff5, 0 0 15px #fff inset;
 }
+
 .curso-image img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
-.curso-info { padding:20px; }
+
+.curso-info {
+  padding: 20px;
+}
+
 .curso-info h3 {
-  font-size:1.5rem;
-  color:#fff;
-  margin-bottom:10px;
-  text-shadow:0 0 5px #fff;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #fff;
 }
+
 .curso-info p {
-  font-size:1.1rem;
-  color:#aaa;
-  margin-bottom:20px;
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-bottom: 20px;
 }
 
 .inscrever-btn {
-  display:inline-block;
-  text-align:center;
-  background-color:#fff;
-  color:#000;
-  border:none;
-  border-radius:8px;
-  font-weight:700;
-  font-size:1.15rem;
-  padding:12px 24px;
-  cursor:pointer;
-  box-shadow:0 0 10px #fff3;
-  transition:transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  text-decoration:none;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fff3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
 }
+
 .inscrever-btn:hover {
-  background-color:#ccc;
-  box-shadow:0 0 20px #fff5;
-  transform:scale(1.1);
+  background-color: #ccc;
+  box-shadow: 0 0 20px #fff5;
+  transform: scale(1.1);
 }
 
 /* ===== Adicionar novo curso ===== */
@@ -144,23 +208,27 @@ header img {
   margin: 0 auto 50px;
   text-align: center;
 }
+
 .adicionar-logo {
-  text-align:center;
-  margin-bottom:25px;
+  text-align: center;
+  margin-bottom: 25px;
 }
+
 .adicionar-logo h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: #fff;
   text-shadow: 0 0 8px #fff, 0 0 16px #aaa;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
+
 .adicionar-logo img {
-  width:100px;
-  border-radius:50%;
-  box-shadow:0 0 15px #fff;
-  animation:logoPulse 2s infinite alternate;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #fff;
+  animation: logoPulse 2s infinite alternate;
 }
+
 .adicionar-curso h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -168,23 +236,27 @@ header img {
   color: #fff;
   text-shadow: 0 0 5px #888;
 }
+
 .adicionar-curso form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.adicionar-curso input, 
+
+.adicionar-curso input,
 .adicionar-curso button {
   padding: 12px;
   font-size: 1.1rem;
   border-radius: 8px;
   border: none;
 }
+
 .adicionar-curso input {
   background: #222;
   color: #fff;
   border: 1px solid #555;
 }
+
 .adicionar-curso button {
   background: #fff;
   color: #000;
@@ -192,6 +264,7 @@ header img {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
 }
+
 .adicionar-curso button:hover {
   background: #ccc;
   transform: scale(1.05);
@@ -199,75 +272,76 @@ header img {
 
 /* ===== Rodapé ===== */
 footer {
-  background-color:#111;
-  width:100%;
-  padding:15px 20px;
-  text-align:center;
-  flex-shrink:0;
+  background-color: #111;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: center;
+  flex-shrink: 0;
 }
+
 footer .footer-logo {
-  font-family:'Orbitron', sans-serif;
-  font-weight:900;
-  font-size:2rem;
-  color:#fff;
-  text-shadow:0 0 8px #fff,0 0 16px #aaa;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 16px #aaa;
 }
+
 footer p {
   color: #aaa;
   margin: 8px 0;
 }
+
 footer a {
   color: #aaa;
   text-decoration: none;
   font-weight: bold;
 }
+
 footer a:hover {
   color: #fff;
   text-shadow: 0 0 5px #888;
 }
 
 /* ===== Responsivo ===== */
-@media (max-width:768px){
-  header h1 { font-size:2.2rem; }
-  .curso-info h3 { font-size:1.3rem; }
-  .curso-info p { font-size:1rem; }
-  .inscrever-btn { font-size:1rem; padding:10px 20px; }
-  .adicionar-curso h2 { font-size:1.5rem; }
-}
-@media (max-width:480px){
-  header img { width:80px; }
-  .voltar-btn { padding:10px 20px; font-size:1rem; }
-  .curso-container { gap:15px; }
-  .curso-card { border-width:1px; }
-}
-.hero-section {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.5; /* ajuste a transparência */
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  font-size: 24px;
-  z-index: 1;
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .curso-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .curso-info p {
+    font-size: 1rem;
+  }
+
+  .inscrever-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .adicionar-curso h2 {
+    font-size: 1.5rem;
+  }
 }
 
+@media (max-width: 480px) {
+  header img {
+    width: 80px;
+  }
+
+  .voltar-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .curso-container {
+    gap: 15px;
+  }
+
+  .curso-card {
+    border-width: 1px;
+  }
+}
