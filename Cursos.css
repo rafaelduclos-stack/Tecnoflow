@@ -242,7 +242,7 @@ footer a:hover {
 }
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -270,3 +270,4 @@ footer a:hover {
   font-size: 24px;
   z-index: 1;
 }
+
