@@ -24,6 +24,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: white;
 }
 
 /* Vídeo ocupa 100% do hero sem cortar */
@@ -59,47 +60,7 @@ html, body {
   text-shadow: 0 0 5px #000;
 }
 
-/* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-  }
-}
-/* === RESET GERAL === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  background: #000;
-  color: #fff;
-  position: relative;
-}
-
-/* === CONTAINER PRINCIPAL === */
+/* CONTAINER PRINCIPAL */
 .container {
   position: relative;
   z-index: 2;
@@ -110,95 +71,7 @@ body {
   padding: 40px 20px 20px;
 }
 
-/* === HERO COM VÍDEO DE FUNDO === */
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.5; /* ajuste a transparência */
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  font-size: 24px;
-  z-index: 1;
-}
-
-/* === HEADER / LOGO === */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 0 0 8px #fff, 0 0 16px #aaa;
-}
-
-header img {
-  width: 120px;
-  margin-top: 10px;
-  animation: logoPulse 2s infinite alternate;
-}
-
-@keyframes logoPulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.1); }
-}
-
-/* === BOTÃO VOLTAR === */
-.voltar-container {
-  margin: 20px 0 40px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  max-width: 1200px;
-}
-
-.voltar-btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #000;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 14px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff inset;
-  transition: all 0.3s ease;
-}
-
-.voltar-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
-  background: #ccc;
-}
-
-/* === TÍTULO DAS ÁREAS === */
+/* TÍTULO DAS ÁREAS */
 .titulo-cursos {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
@@ -208,7 +81,7 @@ header img {
   text-shadow: 0 0 8px #fff, 0 0 16px #aaa, 0 0 25px #fff;
 }
 
-/* === LISTAGEM DE CURSOS === */
+/* LISTAGEM DE CURSOS */
 .curso-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -277,7 +150,7 @@ header img {
   transform: scale(1.1);
 }
 
-/* === ADICIONAR NOVO CURSO === */
+/* ADICIONAR NOVO CURSO */
 .adicionar-curso {
   background: #111;
   padding: 30px;
@@ -350,7 +223,7 @@ header img {
   transform: scale(1.05);
 }
 
-/* === RODAPÉ === */
+/* RODAPÉ */
 footer {
   background-color: #111;
   width: 100%;
@@ -383,10 +256,14 @@ footer a:hover {
   text-shadow: 0 0 5px #888;
 }
 
-/* === RESPONSIVO === */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  header h1 {
+  .hero-content h1 {
     font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .curso-info h3 {
@@ -408,13 +285,12 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-  header img {
-    width: 80px;
+  .hero-content h1 {
+    font-size: 1.8rem;
   }
 
-  .voltar-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
+  .hero-content p {
+    font-size: 0.95rem;
   }
 
   .curso-container {
@@ -423,5 +299,15 @@ footer a:hover {
 
   .curso-card {
     border-width: 1px;
+  }
+}
+
+/* Animação logo (se usar em algum lugar) */
+@keyframes logoPulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
