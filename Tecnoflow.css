@@ -648,7 +648,18 @@ footer {
 
 
 
-video-card iframe {
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.video-card iframe {
 .background-video {
   position: absolute;
   top: 0;
@@ -661,31 +672,3 @@ video-card iframe {
   z-index: 0;
   opacity: 0.5; /* ajuste a transparência */
 }
-
-/* Responsivo para tablets e celulares */
-@media (max-width: 768px) {
-  .article-image, .news-image {
-    max-height: 100px;
-  }
-  .video-card iframe {
-    max-height: 120px;
-  }
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 480px) {
-  .article-image, .news-image {
-    max-height: 80px;
-  }
-  .video-card iframe {
-    max-height: 100px;
-  }
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  font-size: 24px;
-  z-index: 1;
-}
-
