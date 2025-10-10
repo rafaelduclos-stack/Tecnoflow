@@ -646,29 +646,3 @@ footer {
 }
 
 
-
-
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.video-card iframe {
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-height: 150px; /* altura menor para vídeos */
-  border-radius: 8px;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.5; /* ajuste a transparência */
-}
