@@ -1,88 +1,177 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tecnoflow - Linguagens de Programação</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="Linguagens.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>TecnoFlow - Linguagens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="Linguagem.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <img src="fotologo.jpg" alt="Logo"/>
-    <span class="logo-text">Tecnoflow</span>
+  <!-- Menu Hamburguer -->
+  <div id="menuBtn">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
   </div>
-</header>
 
-<section class="hero">
-  <h1>Explore as Linguagens</h1>
-  <p>Clique nos cards para descobrir mais</p>
-</section>
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-play"></i> Vídeos</a></li>
+      <li><a href="index.html"><i class="fas fa-newspaper"></i> Artigos</a></li>
+      <li><a href="index.html"><i class="fas fa-bolt"></i> Notícias</a></li>
+      <li><a href="index.html"><i class="fas fa-book"></i> Tutoriais</a></li>
+      <li><a href="Cursos.html"><i class="fas fa-graduation-cap"></i> Cursos</a></li>
+      <li><a href="Linguagem.html" class="active"><i class="fas fa-code"></i> Linguagens</a></li>
+    </ul>
+  </nav>
 
-<section class="section">
-  <h2>Linguagens Populares</h2>
-  <div class="grid">
-    <!-- Exemplo de cards -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">C</div>
-        <div class="card-back">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg" alt="C"/>
-          <p>Base para sistemas e softwares de alto desempenho.</p>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="header-center">
+      <div class="logo-container">
+        <svg class="logo-image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 15 L35 35 L35 25 L25 40 L25 60 L35 75 L35 65 L50 85 L65 65 L65 75 L75 60 L75 40 L65 25 L65 35 Z" 
+                fill="white" stroke="white" stroke-width="2"/>
+          <circle cx="50" cy="45" r="3" fill="white"/>
+        </svg>
+        <span class="logo-text">TecnoFlow</span>
       </div>
     </div>
+  </header>
 
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">Python</div>
-        <div class="card-back">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"/>
-          <p>IA, ciência de dados, automação e web.</p>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="espada.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo em HTML5.
+    </video>
+    <div class="hero-content">
+      <h1 class="hero-title">Linguagens de Programação</h1>
+      <p class="hero-subtitle">Domine as linguagens que movem o mundo da tecnologia</p>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <h2 class="titulo-cursos">Principais Linguagens</h2>
+    <div class="curso-container">
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/python.jpg" alt="Python"></div>
+        <div class="curso-info">
+          <h3>Python</h3>
+          <p>Fácil de aprender e poderosa, ideal para IA, ciência de dados e automação.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">JavaScript</div>
-        <div class="card-back">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"/>
-          <p>Essencial para páginas web interativas.</p>
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/javascript.jpg" alt="JavaScript"></div>
+        <div class="curso-info">
+          <h3>JavaScript</h3>
+          <p>A linguagem da web moderna. Crie sites, APIs e até apps mobile com JS.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
         </div>
       </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/java.jpg" alt="Java"></div>
+        <div class="curso-info">
+          <h3>Java</h3>
+          <p>Versátil e robusta, usada em sistemas corporativos e aplicativos Android.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/csharp.jpg" alt="C#"></div>
+        <div class="curso-info">
+          <h3>C#</h3>
+          <p>Linguagem da Microsoft para jogos, aplicativos desktop e web com .NET.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/cpp.jpg" alt="C++"></div>
+        <div class="curso-info">
+          <h3>C++</h3>
+          <p>Potente e performática, usada em games, sistemas embarcados e softwares de alto desempenho.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/php.jpg" alt="PHP"></div>
+        <div class="curso-info">
+          <h3>PHP</h3>
+          <p>Uma das linguagens mais usadas na web, alimentando milhões de sites e sistemas.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/rust.jpg" alt="Rust"></div>
+        <div class="curso-info">
+          <h3>Rust</h3>
+          <p>Segura, moderna e rápida — perfeita para sistemas críticos e backends.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/go.jpg" alt="Go"></div>
+        <div class="curso-info">
+          <h3>Go (Golang)</h3>
+          <p>Desenvolvida pelo Google, é ideal para backends escaláveis e eficientes.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/sql.jpg" alt="SQL"></div>
+        <div class="curso-info">
+          <h3>SQL</h3>
+          <p>Linguagem essencial para manipular e consultar bancos de dados relacionais.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="curso-card">
+        <div class="curso-image"><img src="img/swift.jpg" alt="Swift"></div>
+        <div class="curso-info">
+          <h3>Swift</h3>
+          <p>Linguagem moderna da Apple para desenvolvimento iOS e macOS.</p>
+          <a href="Login.html" class="inscrever-btn">Saiba Mais</a>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </main>
 
-<footer>
-  <div class="footer-logo">
-    <img src="fotologo.jpg" alt="Logo"/>
-    <span>Tecnoflow</span>
-  </div>
-  <p>&copy; 2025 - Portal de Programação - Todos os direitos reservados</p>
-  <div class="socials">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">TecnoFlow</div>
+      <p>&copy; 2025 TecnoFlow - Seu melhor site de Tecnologia</p>
+      <a href="https://rafaelduclos-stack.github.io/Tecnoflow/" target="_blank">- Visite o melhor site de Tecnologia -</a>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
 
-<!-- JavaScript embutido -->
-<script>
-  // Flip nos cards
-  document.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("flipped");
-    });
-  });
-</script>
-
+  <script src="Cursos.js"></script>
 </body>
 </html>
-
