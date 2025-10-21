@@ -15,7 +15,6 @@ body {
   color: #fff;
   overflow: hidden;
   position: relative;
-  isolation: isolate;
 }
 
 .background-video {
