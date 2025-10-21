@@ -27,14 +27,14 @@ body {
 }
 
 @media (max-aspect-ratio: 16/9){
-  #background-video{
+  .background-video{
     width: auto;
     height: 100%;
   }
 }
 
 @media (max-aspect-ratio: 16/9){
-  #background-video{
+  .background-video{
     width: 100%;
     height: auto;
   }
@@ -51,7 +51,6 @@ body {
   width: 95%;
   max-width: 450px;
   text-align: center;
-  opacity: 0;
   animation: fadeUp 1s forwards 0.3s;
 }
 
