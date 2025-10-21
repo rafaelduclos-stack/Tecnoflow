@@ -18,7 +18,7 @@ body {
 }
 
 .background-video {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   right: 0;
@@ -42,8 +42,6 @@ body {
 
 /* Login container */
 .login-container {
-  position: fixed;
-  z-index: 10;
   background: #000;
   padding: 3rem 2rem;
   border-radius: 20px;
