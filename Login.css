@@ -17,15 +17,12 @@ body {
   position: relative;
 }
 
-/* Fundo preto e branco animado */
-body::before {
-  content: '';
+.background-video {
   position: absolute;
-  inset: 0;
-  background: url('fotologo.jpg') no-repeat center center/cover;
-  filter: grayscale(100%) brightness(15%);
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* preenche a tela */
   z-index: 1;
-  animation: bgMove 30s ease-in-out infinite alternate;
+  opacity: 0.4; /* ajusta visibilidade */
 }
 
 @keyframes bgMove {
