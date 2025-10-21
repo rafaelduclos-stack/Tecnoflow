@@ -51,7 +51,6 @@ body {
   width: 95%;
   max-width: 450px;
   text-align: center;
-  transform: translateY(-50px);
   opacity: 0;
   animation: fadeUp 1s forwards 0.3s;
 }
